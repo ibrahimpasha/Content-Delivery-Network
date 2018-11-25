@@ -1,0 +1,59 @@
+2018-11-25 23:55:25.468647
+Request from: africa
+---Request HEADERS---
+Accept-Encoding: identity
+Host: localhost:8093
+User-Agent: Python-urllib/3.6
+From: africa
+Cachetype: type2
+Connection: close
+
+
+2018-11-25 23:55:25.553535
+File Not Found in asia Cache...Forwarding to Next CDN: europe
+2018-11-25 23:55:32.954654
+Response Back from CDN: europe
+---Response HEADERS---
+Server: BaseHTTP/0.6 Python/3.6.5
+Date: Mon, 26 Nov 2018 05:55:32 GMT
+Content-type: text/html
+Content-length: 55
+isCacheNeeded: False
+
+
+2018-11-25 23:55:41.393914
+Request from: africa
+---Request HEADERS---
+Accept-Encoding: identity
+Host: localhost:8093
+User-Agent: Python-urllib/3.6
+From: africa
+Cachetype: type2
+Connection: close
+
+
+2018-11-25 23:55:41.393914
+File Not Found in asia Cache...Forwarding to Next CDN: europe
+2018-11-25 23:55:46.592607
+Response Back from CDN: europe
+---Response HEADERS---
+Server: BaseHTTP/0.6 Python/3.6.5
+Date: Mon, 26 Nov 2018 05:55:46 GMT
+Content-type: text/html
+Content-length: 55
+isCacheNeeded: True
+
+
+2018-11-25 23:55:56.405408
+Request from: africa
+---Request HEADERS---
+Accept-Encoding: identity
+Host: localhost:8093
+User-Agent: Python-urllib/3.6
+From: africa
+Cachetype: type2
+Connection: close
+
+
+2018-11-25 23:55:56.421088
+File Found in asia Cache

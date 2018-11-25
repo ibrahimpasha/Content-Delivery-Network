@@ -1,0 +1,12 @@
+{"node_name": "nodeB",
+        "node_ip": "localhost",
+        "node_port": "20222",
+        "geo_tag": "antarctica",
+        "log_file":"nodeB_log.txt",
+        "content_ip":"localhost",
+        "content_port":"20232",
+        "links":
+        [{"geo_tag": "africa", "node_ip": "localhost", "node_port": "20221", "link_delay": "3"},
+          {"geo_tag": "asia", "node_ip": "localhost", "node_port": "20223", "link_delay": "5"},
+          {"geo_tag": "europe", "node_ip": "localhost", "node_port": "20224", "link_delay": "4"}]
+        }

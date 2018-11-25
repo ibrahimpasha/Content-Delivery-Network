@@ -1,0 +1,36 @@
+2018-11-25 23:55:29.594933
+Request from: asia
+---Request HEADERS---
+Accept-Encoding: identity
+Host: localhost:8094
+User-Agent: Python-urllib/3.6
+From: asia
+Cachetype: type2
+Connection: close
+
+
+2018-11-25 23:55:30.859856
+File Not Found in europe Cache
+Connecting to Content Server : http://localhost:9094/fileD.html
+2018-11-25 23:55:31.904840
+Response From Content Server
+---Response HEADERS---
+Server: BaseHTTP/0.6 Python/3.6.5
+Date: Mon, 26 Nov 2018 05:55:31 GMT
+Content-type: text/html
+Content-length: 55
+
+
+2018-11-25 23:55:45.515735
+Request from: asia
+---Request HEADERS---
+Accept-Encoding: identity
+Host: localhost:8094
+User-Agent: Python-urllib/3.6
+From: asia
+Cachetype: type2
+Connection: close
+
+
+2018-11-25 23:55:45.515735
+File Found in europe Cache

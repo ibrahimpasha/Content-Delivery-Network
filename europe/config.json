@@ -1,0 +1,13 @@
+{"node_name": "nodeD",
+        "node_ip": "localhost",
+        "node_port": "20224",
+        "geo_tag": "europe",
+        "log_file":"nodeD_log.txt",
+        "content_ip":"localhost",
+        "content_port":"20234",
+        "links":
+        [{"geo_tag": "antarctica", "node_ip": "localhost", "node_port": "20222", "link_delay": "2"},
+          {"geo_tag": "asia", "node_ip": "localhost", "node_port": "20223", "link_delay": "1"},
+          {"geo_tag": "southamerica", "node_ip": "localhost", "node_port": "20226", "link_delay": "4"},
+		  {"geo_tag": "northamerica", "node_ip": "localhost", "node_port": "20225", "link_delay": "2"}]
+        }

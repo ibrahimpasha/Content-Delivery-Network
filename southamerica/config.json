@@ -1,0 +1,11 @@
+{"node_name": "nodeF",
+        "node_ip": "localhost",
+        "node_port": "20226",
+        "geo_tag": "southamerica",
+        "log_file":"nodeF_log.txt",
+        "content_ip":"localhost",
+        "content_port":"20236",
+        "links":
+        [{"geo_tag": "europe", "node_ip": "localhost", "node_port": "20224", "link_delay": "1"},
+          {"geo_tag": "northamerica", "node_ip": "localhost", "node_port": "20225", "link_delay": "2"}]
+        }

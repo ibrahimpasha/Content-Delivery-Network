@@ -1,0 +1,69 @@
+2018-11-25 23:55:23.125255
+Request from: Proxy
+---Request HEADERS---
+Accept-Encoding: identity
+Host: localhost:8091
+User-Agent: Python-urllib/3.6
+From: Proxy
+Cachetype: type2
+Connection: close
+
+
+2018-11-25 23:55:23.443183
+File Not Found in africa Cache...Forwarding to Next CDN: asia
+2018-11-25 23:55:35.017028
+Response Back from CDN: asia
+---Response HEADERS---
+Server: BaseHTTP/0.6 Python/3.6.5
+Date: Mon, 26 Nov 2018 05:55:33 GMT
+Content-type: text/html
+Content-length: 55
+isCacheNeeded: False
+
+
+2018-11-25 23:55:39.367287
+Request from: Proxy
+---Request HEADERS---
+Accept-Encoding: identity
+Host: localhost:8091
+User-Agent: Python-urllib/3.6
+From: Proxy
+Cachetype: type2
+Connection: close
+
+
+2018-11-25 23:55:39.367287
+File Not Found in africa Cache...Forwarding to Next CDN: asia
+2018-11-25 23:55:47.678420
+Response Back from CDN: asia
+---Response HEADERS---
+Server: BaseHTTP/0.6 Python/3.6.5
+Date: Mon, 26 Nov 2018 05:55:47 GMT
+Content-type: text/html
+Content-length: 55
+isCacheNeeded: False
+
+
+2018-11-25 23:55:54.213672
+Request from: Proxy
+---Request HEADERS---
+Accept-Encoding: identity
+Host: localhost:8091
+User-Agent: Python-urllib/3.6
+From: Proxy
+Cachetype: type2
+Connection: close
+
+
+2018-11-25 23:55:54.213672
+File Not Found in africa Cache...Forwarding to Next CDN: asia
+2018-11-25 23:55:57.437763
+Response Back from CDN: asia
+---Response HEADERS---
+Server: BaseHTTP/0.6 Python/3.6.5
+Date: Mon, 26 Nov 2018 05:55:57 GMT
+Content-type: text/html
+Content-length: 55
+isCacheNeeded: True
+
+

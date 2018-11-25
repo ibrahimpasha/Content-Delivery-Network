@@ -1,0 +1,12 @@
+{"node_name": "nodeE",
+        "node_ip": "localhost",
+        "node_port": "20225",
+        "geo_tag": "northamerica",
+        "log_file":"nodeE_log.txt",
+        "content_ip":"localhost",
+        "content_port":"20235",
+        "links":
+        [{"geo_tag": "europe", "node_ip": "localhost", "node_port": "20224", "link_delay": "3"},
+          {"geo_tag": "asia", "node_ip": "localhost", "node_port": "20223", "link_delay": "4"},
+          {"geo_tag": "southamerica", "node_ip": "localhost", "node_port": "20226", "link_delay": "2"}]
+        }
