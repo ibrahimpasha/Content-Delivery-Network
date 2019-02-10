@@ -9,7 +9,7 @@ cache schemes, providing the internet content closer to the end user.
 
 ![alt text](https://github.com/ibrahimpasha/Content-Delivery-Network/blob/master/topology.PNG)
 
-Fig(a): Topology of CDN servers with proxy, delay information, content-servers, cache storage.
+__Fig(a):__ Topology of CDN servers with proxy, delay information, content-servers, cache storage.
 
 Designed CDN, is a network of six geographically interconnected regions namely africa, antarctica, asia,
 europe, northamerica and southamerica to deliver content relatively with high performance to end user.
@@ -79,7 +79,8 @@ maintained individual cache storage for each region.
 dynamically without hardcoding.
 ##### Measurements: 
 For Instance request from the client is http://europe/fileD.html, the shortest path
-would be… Browser---> Proxy ---> Africa ---> Asia ---> Europe ---> Content Server.
+would be… 
+Browser---> Proxy ---> Africa ---> Asia ---> Europe ---> Content Server.
 
 ![alt text](https://github.com/ibrahimpasha/Content-Delivery-Network/blob/master/Results.JPG)
 
