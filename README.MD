@@ -1,8 +1,4 @@
 ### Content Delivery Network
-Network of CDN nodes distributed geographically among six regions africa, antarctica, asia, europe, northamerica, southamerica to deliver content relatively at high performance to end user with shortest path using Distance Vector Routing algorithm. Each CDN node has its own content server connected to it to server files. Each CDN node has cache storage to keep the contents for a period of time.
-#### Topology:
-![alt text](https://github.com/ibrahimpasha/Content-Delivery-Network/blob/master/topology.PNG)
-
 #### Introduction:
 Content Delivery Network is a geographically distributed group of servers which work together to
 provide fast delivery of internet content. A CDN does not host content but it does help cache content at
@@ -10,8 +6,10 @@ network edge which improves website performance by means of increasing content a
 improving the website load times and reducing the band with costs. Thus, by implementing different
 cache schemes, providing the internet content closer to the end user.
 #### Design:
-Fig(a): Topology of CDN servers with proxy, delay information, content-servers, cache storage.
+
 ![alt text](https://github.com/ibrahimpasha/Content-Delivery-Network/blob/master/topology.PNG)
+Fig(a): Topology of CDN servers with proxy, delay information, content-servers, cache storage.
+
 Designed CDN, is a network of six geographically interconnected regions namely africa, antarctica, asia,
 europe, northamerica and southamerica to deliver content relatively with high performance to end user.
 Each CDN server is connected to its neighbor CDN servers and will have delay information to send packets
@@ -19,6 +17,7 @@ to its neighbors which will be provided in configuration file. Also, Each CDN no
 server connected to it which serves content and Each CDN node has cache storage to keep the contents
 for a period of time. A proxy server will be connected to one of the CDN servers and will take request
 directly from the client and forwards it.
+
 Each CDN node will find the Round-Trip Time to its neighbor CDN servers and will use it to find the shortest
 paths with least latency to all the CDN servers using Distance Vector Routing algorithm. The response
 forwarding in the CDN network is done along the same path as the request forwarding. For the cache
@@ -31,22 +30,22 @@ when the response is forwarded. (for instance, if the request to Europe content 
 it first caches at Europe CDN, then at Asia CDN in second request, then at Africa CDN in third
 request).
 #### Implementation:
-Measuring Delays: Each CDN node will have its configuration file in which it will have its geographical
+##### Measuring Delays: Each CDN node will have its configuration file in which it will have its geographical
 region information that identifies its location and IP address and port details to its content server, and
 also links details to its neighbour CDN servers. When the CDN starts running it will start measuring the
 Round-Trip Time to its neighbours by sending a GET request ‘ping’. Both the CDNs will wait for a delay
 time to its neighbours mentioned in the config file while sending and receiving the request.
-Distance Vector Routing Algorithm: After all CDN servers finish finding the RTT, they will start running
+##### Distance Vector Routing Algorithm: After all CDN servers finish finding the RTT, they will start running
 the Distance Vector Routing Protocol to find the shortest path to all the CDN servers by Bellman Ford’s
 principle dx(y) = min {c(x,v) + dv(y)}. Where dx(y) = cost of least-cost path from X to Y. Each CDN will
 maintain a routing table and shares it with its neighbors and when each CDN node finds the least RTT to
 another node, routing table gets updated. After a node updates its routing table, it immediately shares
 the updated routing table with its neighbor CDN servers. When every node has updated routing table, it
 will have the shortest path to all the other CDN servers.
-Proxy and Content Servers: Content servers will be connected to its CDN servers and serve the
+##### Proxy and Content Servers: Content servers will be connected to its CDN servers and serve the
 requested files without any delay. Proxy server is connected to one of the CDN server which is
 mentioned when it is getting started and will also have type of cache that it wants to use.
-Caching: Once, every servers starts ready to serve the requests, Client will request a hostname (e. g. ,
+##### Caching: Once, every servers starts ready to serve the requests, Client will request a hostname (e. g. ,
 http://europe/fileD.html )which indicates the region where the HTTP server is located. The browser
 connects to a proxy which forwards the request to the CDN server it is connected to. The CDN server
 then decides if it should fetch this file directly from the Content Server or through the CDN network,
@@ -72,7 +71,7 @@ file name conflicts arise even though two files are different. To resolve this i
 maintained individual cache storage for each region.
 2. While serving the different types of files, maintaining mimetype for Content-type implemented
 dynamically without hardcoding.
-Measurements: For Instance request from the client is http://europe/fileD.html, the shortest path
+##### Measurements: For Instance request from the client is http://europe/fileD.html, the shortest path
 would be… Browser---> Proxy ---> Africa ---> Asia ---> Europe ---> Content Server.
 
 
