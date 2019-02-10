@@ -8,6 +8,7 @@ cache schemes, providing the internet content closer to the end user.
 #### Design:
 
 ![alt text](https://github.com/ibrahimpasha/Content-Delivery-Network/blob/master/topology.PNG)
+
 Fig(a): Topology of CDN servers with proxy, delay information, content-servers, cache storage.
 
 Designed CDN, is a network of six geographically interconnected regions namely africa, antarctica, asia,
@@ -30,22 +31,26 @@ when the response is forwarded. (for instance, if the request to Europe content 
 it first caches at Europe CDN, then at Asia CDN in second request, then at Africa CDN in third
 request).
 #### Implementation:
-##### Measuring Delays: Each CDN node will have its configuration file in which it will have its geographical
+##### Measuring Delays:
+Each CDN node will have its configuration file in which it will have its geographical
 region information that identifies its location and IP address and port details to its content server, and
 also links details to its neighbour CDN servers. When the CDN starts running it will start measuring the
 Round-Trip Time to its neighbours by sending a GET request ‘ping’. Both the CDNs will wait for a delay
 time to its neighbours mentioned in the config file while sending and receiving the request.
-##### Distance Vector Routing Algorithm: After all CDN servers finish finding the RTT, they will start running
+##### Distance Vector Routing Algorithm:
+After all CDN servers finish finding the RTT, they will start running
 the Distance Vector Routing Protocol to find the shortest path to all the CDN servers by Bellman Ford’s
 principle dx(y) = min {c(x,v) + dv(y)}. Where dx(y) = cost of least-cost path from X to Y. Each CDN will
 maintain a routing table and shares it with its neighbors and when each CDN node finds the least RTT to
 another node, routing table gets updated. After a node updates its routing table, it immediately shares
 the updated routing table with its neighbor CDN servers. When every node has updated routing table, it
 will have the shortest path to all the other CDN servers.
-##### Proxy and Content Servers: Content servers will be connected to its CDN servers and serve the
+##### Proxy and Content Servers:
+Content servers will be connected to its CDN servers and serve the
 requested files without any delay. Proxy server is connected to one of the CDN server which is
 mentioned when it is getting started and will also have type of cache that it wants to use.
-##### Caching: Once, every servers starts ready to serve the requests, Client will request a hostname (e. g. ,
+##### Caching:
+Once, every servers starts ready to serve the requests, Client will request a hostname (e. g. ,
 http://europe/fileD.html )which indicates the region where the HTTP server is located. The browser
 connects to a proxy which forwards the request to the CDN server it is connected to. The CDN server
 then decides if it should fetch this file directly from the Content Server or through the CDN network,
@@ -62,7 +67,8 @@ If the CDN server is not the designated region to serve the content, it will che
 which is in shortest path (gets this info from routing table) and caches the response for a 100
 second of time based on type of cache.
 
-#### Logging: Whenever a CDN server gets a request it logs request info such as where the request is coming
+#### Logging: 
+Whenever a CDN server gets a request it logs request info such as where the request is coming
 from, request headers and to where the next request heading to. And while getting a response it logs
 info about response headers and content cache information at CDN.
 New Features: Few small features added are…
@@ -71,9 +77,20 @@ file name conflicts arise even though two files are different. To resolve this i
 maintained individual cache storage for each region.
 2. While serving the different types of files, maintaining mimetype for Content-type implemented
 dynamically without hardcoding.
-##### Measurements: For Instance request from the client is http://europe/fileD.html, the shortest path
+##### Measurements: 
+For Instance request from the client is http://europe/fileD.html, the shortest path
 would be… Browser---> Proxy ---> Africa ---> Asia ---> Europe ---> Content Server.
 
+![alt text](https://github.com/ibrahimpasha/Content-Delivery-Network/blob/master/Results.JPG)
+
+#### Conclusion:
+From the measurements, What I observed is that both the type1 and type2 cache schemes are good in
+their own way. As for the type1 cache scheme, it will cache the response at all the CDN node in the
+response path for first request itself. The cache will last for 100 seconds of time, after that content in
+cache gets erased at a time at all the CDN nodes. It works good only for the short period frequent
+requests. As for the type2 cache scheme, it will cache the response for single hop at a time for a request
+in response path. Even the cache timeout is 100 seconds, it seems like it lasts for more than the time out
+at subsequent hops. So, I believe it works good for requests that are not frequent for the content.
 
 #### Steps to run
 There are 6 folders for 6 different regions for simulating the environment. Every region has same cdn.py and contentServer.py file but have different config.json files.
