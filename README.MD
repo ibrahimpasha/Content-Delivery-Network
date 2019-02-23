@@ -23,10 +23,10 @@ Each CDN node will find the Round-Trip Time to its neighbor CDN servers and will
 paths with least latency to all the CDN servers using Distance Vector Routing algorithm. The response
 forwarding in the CDN network is done along the same path as the request forwarding. For the cache
 design, there will be two types of cache schemes,
-1. ‘type1’: Caches the response along each node as it is forwarded to the origin of request. (for
+1. __‘type1’__: Caches the response along each node as it is forwarded to the origin of request. (for
 instance, if the request to Europe content server is raised, it caches the content at Europe, Asia,
 and Africa CDNs in a single request.)
-2. ‘type2’: Caches the response just on the first hop that does not have the content on the cache yet
+2. __‘type2’__: Caches the response just on the first hop that does not have the content on the cache yet
 when the response is forwarded. (for instance, if the request to Europe content server is raised,
 it first caches at Europe CDN, then at Asia CDN in second request, then at Africa CDN in third
 request).
@@ -80,7 +80,8 @@ dynamically without hardcoding.
 ##### Measurements: 
 For Instance request from the client is http://europe/fileD.html, the shortest path
 would be… 
-Browser---> Proxy ---> Africa ---> Asia ---> Europe ---> Content Server.
+
+`Browser---> Proxy ---> Africa ---> Asia ---> Europe ---> Content Server.`
 
 ![alt text](https://github.com/ibrahimpasha/Content-Delivery-Network/blob/master/Results.JPG)
 
